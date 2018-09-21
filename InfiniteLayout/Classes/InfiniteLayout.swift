@@ -161,8 +161,14 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
             return
         }
         let page = self.pageIndex(from: self.page(for: collectionView.contentOffset))
-        let offset = self.preferredContentOffset(forContentOffset: collectionView.contentOffset)
+        var offset = self.preferredContentOffset(forContentOffset: collectionView.contentOffset)
         if (page < 2 || page > self.multiplier - 2) && collectionView.contentOffset != offset {
+            if offset.y > self.contentSize.height * 4 {
+                offset.y = self.contentSize.height * 4
+            }
+            if offset.x > self.contentSize.width * 4 {
+                offset.x = self.contentSize.width * 4
+            }
             self.updateContentOffset(offset)
         }
     }
@@ -254,8 +260,14 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
                                 y: self.scrollDirection == .vertical ? collectionView.contentOffset.y + velocity.y * velocityMultiplier : targetContentOffset.pointee.y)
         
         guard let preferredAttributes = self.preferredVisibleLayoutAttributes(at: newTarget, velocity: velocity, targetOffset: targetContentOffset.pointee),
-            let offset =  self.centeredContentOffset(forRect: preferredAttributes.frame) else {
+            var offset =  self.centeredContentOffset(forRect: preferredAttributes.frame) else {
                 return
+        }
+        if offset.y > self.contentSize.height * 4 {
+            offset.y = self.contentSize.height * 4
+        }
+        if offset.x > self.contentSize.width * 4 {
+            offset.x = self.contentSize.width * 4
         }
         targetContentOffset.pointee = offset
     }
