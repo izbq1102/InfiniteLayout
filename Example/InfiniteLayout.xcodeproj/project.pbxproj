@@ -267,7 +267,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = CPE39ZT2AY;
+						DevelopmentTeam = 2TW9F2RB7X;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -541,7 +541,7 @@
 			baseConfigurationReference = 17E9A86BF3432BF233E3D297 /* Pods-InfiniteLayout_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CPE39ZT2AY;
+				DEVELOPMENT_TEAM = 2TW9F2RB7X;
 				INFOPLIST_FILE = InfiniteLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -558,7 +558,7 @@
 			baseConfigurationReference = AD3D900D0067605DEAFF148B /* Pods-InfiniteLayout_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CPE39ZT2AY;
+				DEVELOPMENT_TEAM = 2TW9F2RB7X;
 				INFOPLIST_FILE = InfiniteLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
